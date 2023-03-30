@@ -1,0 +1,56 @@
+
+
+• CTF name: XSS - Reflected (POST)
+
+	  • Challenge category:A3-BWAPP
+
+	     • Challenge description:  
+				STEP 1: Firstly i tried my routine which is '"><() and it was reflected as it is. 
+				STEP 2: then i tried to see if <script> will be filtered or not and it wasn't being filtered. 
+    	 	STEP 3: i compelet crafting my payload <script>alert(1)</script> and the alert popedup.
+
+
+
+
+• CTF name: XSS - Reflected (HREF)
+
+	  • Challenge category:A3-BWAPP
+
+	     • Challenge description:  
+				STEP 1: Firstly i tried my routine which is '"><() and it was reflected as it is. 
+				STEP 2: i looked in the source code and see that the value of the input is inserted inside a <p> tag. 
+    	 	STEP 3: then i went to try and closing this tag in my input and it did closed.
+				STEP 4: so i enterd my malicious script after the </p> and it showed me the cookies </p> <img src=x onerror= alert(document.cookie)>
+
+
+
+
+
+• CTF name: SQLiteManager XSS
+
+	  • Challenge category:A3-BWAPP
+
+	     • Challenge description:  
+				STEP 1: when you first open the chalenge you will find an integerated link when you click on sqliteManager that will redirect you to a diffrent page . 
+				STEP 2: int the other page you will find a white space for the Name input if you entered a name then head to the source code you will find it inserted inside a value thats inside a <td> tag 
+    	 	STEP 3: so to bypass this i need to het out of those tags first so i started crafting my payload with " in the begining to close the value opening quotes the a closing tag > for closing the input 
+				STEP 4: after that let's close the opened <td> with </td> 
+				STEP 5: lastley let's combine all of that with our crafted payload "></td><img src=x onerror= alert(document.cookie)> then an alert with the cookies value will pop.
+        
+        
+        
+      
+
+• CTF name: SQLiteManager XSS
+
+	  • Challenge category:A3-BWAPP
+
+	     • Challenge description:    
+         STEP 1: if we look at the page we will find no place to inter any input all we would found is a like button to click so let's intercept the request
+         STEP 2: after intercepting the request we will found that if we change the value of the genre it will be reflected in the response
+         STEP 3: now we can inject after carfting owr malicious payload in the genre so thats a vulnrubility bec. the value of it is refelcting in the cookie header.
+        
+        
+        
+        
+        
